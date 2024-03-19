@@ -65,7 +65,7 @@ def main(input_filename, output_filename):
     np_image = itk.GetArrayFromImage(itk_image).astype(np.uint8)
 
     # Reshape the array
-    np_array_reshaped = np_image.reshape([image_size[2], image_size[1], image_size[0]])
+    np_array_reshaped = np.transpose(np_image, (2, 1, 0))
 
     # create a volume mesh:
     mesh = pygalmesh.generate_from_array(
@@ -208,8 +208,8 @@ def main(input_filename, output_filename):
             # Apply boundary conditions based on spatial location relative to the bounding box
             for i in range(numberofpoints):
                 pt = bcpoints.GetPoint(i)
-                # Apply BC if the point is within the defined thickness from the bounding box's minimum x-value
-                if pt[0] < (bbox[0] + args.bc_thickness):
+                # Apply BC if the point is within the defined thickness from the bounding box's minimum z-value
+                if pt[2] < (bbox[4] + args.bc_thickness):
                     bcdata.InsertNextValue(1)
                 else:
                     bcdata.InsertNextValue(0)
