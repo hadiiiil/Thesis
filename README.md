@@ -1,4 +1,4 @@
-# Create Conda library for installing the dependencies that are in the requirements file:
+# Create conda environment for installing the dependencies that are in the requirements file:
       conda create --name myenv python=3.10.9
       pip install -r requirements.txt
       
