@@ -13,4 +13,4 @@
       python Thesis/resampling.py BCT/uncompressed_nrrd 0.273
 
 # Third, We generate the volume mesh, run the extract-model.py by writing in the terminal:
-      
+      python Thesis/extract-model.py BCT/uncompressed_nrrd/UncompressedBreast1/UncompressedBreast1_resampled.nrrd -o BCT/uncompressed_nrrd/UncompressedBreast1/volmesh1.vtk
