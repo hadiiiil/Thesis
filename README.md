@@ -8,6 +8,9 @@
       
 # First, We convert the Dicom series into NRRD image, run the dicom2nrrd.py by writing in the terminal:
       python Thesis/dicom2nrrd.py BCT/uncompressed_dicom BCT/uncompressed_dicom/Breast_Metadata.csv
+      
+Then move the nrrd images to a new folder uncompressed_nrrd by running the following command:
+      python Thesis/move-nrrd.py
 
 # Second, We resample the images into isotropic voxel spacing 0.273, run the resampling.py by writing in the terminal:
       python Thesis/resampling.py BCT/uncompressed_nrrd 0.273
