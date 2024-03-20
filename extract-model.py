@@ -152,7 +152,7 @@ def main(input_filename, output_filename):
 
         # ITK image to NumPy array for efficient access
         np_image = itk.array_from_image(image)
-
+        np_image = np.transpose(np_image, (2, 1, 0))
         # Iterate over each cell center
         for i in range(point_set.GetNumberOfPoints()):
             pt = point_set.GetPoint(i)
