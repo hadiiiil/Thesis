@@ -5,6 +5,10 @@
 # For installing pygalmesh:
       conda install cgal eigen
       conda install pygalmesh
+# For installing Tetgen python library interface from source at GitHub: https://github.com/pyvista/tetgen
+      git clone https://github.com/pyvista/tetgen
+      cd tetgen
+      pip install .
       
 # First, We convert the Dicom series into NRRD image, run the dicom2nrrd.py by writing in the terminal:
       python Thesis/dicom2nrrd.py BCT/uncompressed_dicom BCT/uncompressed_dicom/Breast_Metadata.csv
