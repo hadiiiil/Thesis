@@ -285,4 +285,4 @@ if __name__ == "__main__":
     
     main(args.input_filename, args.output)
 
-#python thesis/new_model.py BCT/uncompressed_nrrd/UncompressedBreast1/UncompressedBreast1_resampled.nrrd -o BCT/uncompressed_nrrd/UncompressedBreast1/volmesh1.vtk
+#python thesis/gen-mesh.py BCT/uncompressed_nrrd/UncompressedBreast1/UncompressedBreast1_resampled.nrrd -o BCT/uncompressed_nrrd/UncompressedBreast1/volmesh1.vtk
